@@ -10,7 +10,12 @@ const home = () => {
     <div className={styles.container}>
         <div className={styles.subContainer}>
             <Category/>
-            <Gallery/>
+            <div className={styles.gallery}>
+              <Gallery/>
+              <Gallery/>
+              <Gallery/>
+              <Gallery/>
+            </div>
         </div>
       <Shuffle/>
     </div>

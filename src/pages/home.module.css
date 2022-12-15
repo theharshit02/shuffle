@@ -10,3 +10,10 @@
     background: #FFFFFF;
     border-radius: 0px 0px 60px 60px;
 }
+
+.gallery{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    top: 60px;
+}
