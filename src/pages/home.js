@@ -1,7 +1,8 @@
 import React from 'react'
 import Category from '../components/category/category'
-import Filter from '../components/filter/filter'
 import Gallery from '../components/gallery/gallery'
+import Shuffle from '../components/shuffle/shuffle'
+
 import styles from './home.module.css'
 
 const home = () => {
@@ -9,9 +10,9 @@ const home = () => {
     <div className={styles.container}>
         <div className={styles.subContainer}>
             <Category/>
-            <Filter/>
             <Gallery/>
         </div>
+      <Shuffle/>
     </div>
   )
 }

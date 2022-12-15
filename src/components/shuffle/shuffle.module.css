@@ -1,0 +1,18 @@
+.shuffleDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button{
+    width: 310px;
+    height: 90px;
+    /* left: 565px;
+    top: 755px; */
+    margin-top: 50px;
+    background: #F5BE49;
+    border-radius: 15px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    }
