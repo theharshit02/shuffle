@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './button.module.css'
 import axios from 'axios'
 
-const Button = () => {
+const Button = (props) => {
   const [fetchCats, setfetchCats] = useState([]);
 
   async function getCategory(){
@@ -14,20 +14,21 @@ const Button = () => {
     } 
   }
 
+  function handleclick(e){
+    props.select(e.target.id)
+    console.log(e.target.id);
+  }
+
   useEffect(() => {
     getCategory()
   }, []);
 
   return (
     <div>
-
-      {/* <button onClick={getCategory}>click me</button> */}
-      {/* {getCategory()} */}
       {console.log(fetchCats)}
-      <button className={styles.button}>{fetchCats[0]}</button>
-      <button className={styles.button}>{fetchCats[1]}</button>
-      {/* <button className={styles.button}>hello</button>
-      <button className={styles.button}>hello</button> */}
+      {fetchCats.map((i)=>{
+        return <button onClick={handleclick} id={i} className={styles.button}>{i}</button>
+      })}
     </div>
   )
 }

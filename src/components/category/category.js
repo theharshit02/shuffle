@@ -4,15 +4,24 @@ import Filter from '../filter/filter'
 import styles from './category.module.css'
 
 
-const category = () => {
+const category = (props) => {
 
+  function handleselected(e){
+    console.log(e);
+    props.selectCategory(e)
+  }
+
+  function handlefilter(e){
+    // console.log(e);
+    props.filteroption(e)
+  }
   return (
     <div>
       <div className={styles.category}>
-        <Button />
+        <Button select={handleselected} />
       </div>
       <div className={styles.filter}>
-        <Filter />
+        <Filter filter={handlefilter}/>
       </div>
     </div>
   )

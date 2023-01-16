@@ -1,15 +1,15 @@
 import React from 'react'
 import styles from './gallery.module.css'
 
-const gallery = () => {
+const gallery = (props) => {
   return (
     <div className={styles.card}>
       <div>
-        <img className={styles.image} src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Nature_Portrait.jpg/1200px-Nature_Portrait.jpg" alt="" />
+        <img className={styles.image} src={props.link} alt="" />
       </div>
       <div className={styles.description}>
         <p className={styles.likes}>❤️</p>
-        <p className={styles.name}>image name</p>
+        <p className={styles.name}>{props.name}</p>
       </div>
     </div>
   )
