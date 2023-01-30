@@ -6,17 +6,15 @@ const Button = (props) => {
   const [fetchCats, setfetchCats] = useState([]);
 
   async function getCategory(){
-    const url="http://localhost:3000/api/discover/listCategories"
+    const url="https://microassessment.onrender.com/api/discover/listCategories"
     const result= await axios.get(url)
     if(result.data){
-      // console.log("result",result.data);
       setfetchCats(result.data);
     } 
   }
 
   function handleclick(e){
     props.select(e.target.id)
-    console.log(e.target.id);
   }
 
   useEffect(() => {
@@ -25,7 +23,6 @@ const Button = (props) => {
 
   return (
     <div>
-      {console.log(fetchCats)}
       {fetchCats.map((i)=>{
         return <button onClick={handleclick} id={i} className={styles.button}>{i}</button>
       })}

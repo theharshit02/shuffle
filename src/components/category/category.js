@@ -7,12 +7,10 @@ import styles from './category.module.css'
 const category = (props) => {
 
   function handleselected(e){
-    console.log(e);
     props.selectCategory(e)
   }
 
   function handlefilter(e){
-    // console.log(e);
     props.filteroption(e)
   }
   return (

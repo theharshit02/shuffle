@@ -3,12 +3,10 @@ import styles from './filter.module.css'
 
 const Filter = (props) => {
   const [option, setoption] = useState()
-  // setoption()
   function handlechange(e){
     setoption(e.target.value)
   }
   props.filter(option)
-  // console.log(option);
 
   return (
     <div>

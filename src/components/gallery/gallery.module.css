@@ -22,9 +22,14 @@ p{
 
 .likes{
     font-size: 20px;
+    cursor: pointer;
 }
 
 .name{
     font-weight: 700;
     padding-top: 3px;
+}
+
+.likeIcon{
+    pointer-events: none;
 }
